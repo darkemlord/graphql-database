@@ -1,7 +1,13 @@
+const Post = require("../models/Post");
+
 const resolvers = {
   Query: {
-    papi: () => {
-      return "hello love, papi!"
+    async getPosts(){
+      try {
+         return await Post.find();
+      } catch (err) {
+        throw new Error(err)
+      }
     }
   }
 };

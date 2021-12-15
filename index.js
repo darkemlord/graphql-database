@@ -3,6 +3,7 @@ const typeDefs = require('./gql/typeDefs');
 const resolvers = require('./gql/resolvers');
 const mongoose = require('mongoose');
 require('dotenv').config( { path: ".env" }); //calling the ENV
+const post = require('./models/Post');
 
 const server = new ApolloServer({
   typeDefs,

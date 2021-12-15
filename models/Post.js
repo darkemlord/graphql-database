@@ -3,18 +3,18 @@ const {model, Schema} = require('mongoose');
 const postSchema = new Schema({
   body: String,
   username: String,
-  createdAt: Date.now(),
+  createdAt: String,
   comments: [
     {
       body: String,
       username: String,
-      createdAt: Date.now(),
+      createdAt: String
     }
   ],
   likes: [
     {
     username: String,
-    createdAt: Date.now(),
+    createdAt: String,
     }
   ],
   user: {
@@ -23,4 +23,4 @@ const postSchema = new Schema({
   }
 });
 
-module.exports = module('Post', postSchema);
+module.exports = model('Post', postSchema);
