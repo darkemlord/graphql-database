@@ -9,5 +9,10 @@
     "dev": "node ./index.js"
   },
   "author": "emanuel caro",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.5.0",
+    "graphql": "^16.1.0",
+    "mongoose": "^6.1.2"
+  }
 }
